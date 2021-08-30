@@ -12,6 +12,7 @@
 .hidden {
   display: none;
 }
+
 #clock, #greeting, #quote, #weather, li, #label-todo, #tdsf {
   font-family: 'Kid A', 'Lab';
   font-weight: normal;

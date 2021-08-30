@@ -29,7 +29,7 @@ const quotes = [
   },
   {
     funcname: "JSON.stringify(some)",
-    description: "some을 스트링을 만든다.",
+    description: "some을 스트링으로 만든다.",
   },
   {
     funcname: "JSON.parse(str)",

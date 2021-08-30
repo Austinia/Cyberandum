@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Lab';
-  src: url('../src/fonts/LAB디지털.ttf');
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
 }
 
 @font-face {

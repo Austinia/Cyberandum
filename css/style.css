@@ -17,27 +17,44 @@
   font-family: 'Kid A', 'Lab';
   font-weight: normal;
   font-style: normal;
-  /* background-color: black; */
 }
 
-#label-todo {
-  color: gold;
-  font-size: 50;
+@media screen and (max-width: 1280px) and (orientation: landscape){
+  #login-form {
+    display: none;
+  }
+  #greeting {
+    display: none;
+  }
+  #todotodo {
+    display: none;
+  }
+  #quote {
+    display: none;
+  }
+  #weather {
+    display: none;
+  }
+  #clock-weather {
+    margin: auto auto auto auto;
+  }
+  #clock {
+    color: yellow;
+    font-size: 100px;
+    margin-bottom: auto;
+    background-color: rgba( 25, 0, 0, 0.5);
+    text-align: center;
+    margin: 0;
+    line-height: 7.2;
+  }
+  button {
+    display: none;
+  }
+  .container {
+    display:flexbox;
+  }
 }
-
-#greeting {
-  color: chartreuse;
-  line-height: 1.8;
-  background-color: rgba( 25, 0, 0, 0.5);
-  font-size: 60px;
-}
-
-#clock {
-  color: yellow;
-  font-size: 200px;
-  margin-bottom: auto;
-  background-color: rgba( 25, 0, 0, 0.5);
-}
+/* --------container-------- */
 
 body {
   background-size: 100%;
@@ -46,12 +63,108 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+@media screen and (min-width: 1440px) {
+  .container {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: minmax(290px, 1fr) minmax(1050px, 2fr) minmax(290px, 1fr);
+    grid-template-rows: 180px 670px 50px;
+  }
+}
+@media screen and (max-width: 425px) and (orientation: portrait){
+  .container {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr);
+  }
+}
 
-.container {
-  margin: 10px;
-  display: grid;
-  grid-template-columns: minmax(290px, 1fr) minmax(1050px, 2fr) minmax(290px, 1fr);
-  grid-template-rows: 180px 670px 50px;
+.loginclock {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  text-align: center;
+}
+
+.logingreeting {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+/* --------login Form-------- */
+@media screen and (max-width:425px){
+  #login-form {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+  }
+
+  #login-form button{
+    background:none;
+    border: none;
+    font-family: "Kid A", "Lab";
+    color: wheat;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border: 2px solid crimson;
+  }  
+}
+
+@media screen and (min-width:1024px){
+  #login-form {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: right;
+  }
+
+  #login-form button{
+    background:none;
+    border: none;
+    font-family: "Kid A", "Lab";
+    color: wheat;
+    border: 2px solid crimson;
+  }
+}
+
+#todo-form input, #login-form input {
+  border: none;
+  border-bottom: 2px solid yellowgreen;
+  background: none;
+  color: yellowgreen;
+  font-family: 'Kid A', 'Lab';
+}
+
+/* ---------greeting--------- */
+#greeting {
+  color: chartreuse;
+  line-height: 1.8;
+  background-color: rgba( 25, 0, 0, 0.5);
+  font-size: 60px;
+  text-align: center;
+}
+@media screen and (max-width: 1439px) {
+  #greeting {
+    display: none;
+  }
+}
+/* ------todotodo(Form)------ */
+@media screen and (max-width: 425px) and (orientation: portrait){
+  #todotodo{
+    background-color: rgba( 25, 0, 0, 0.5 );
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  #todo-list {
+    margin-top: 0;
+  }
+}
+
+#label-todo {
+  color: gold;
+  font-size: 50;
 }
 
 #todotodo {
@@ -64,6 +177,76 @@ body::-webkit-scrollbar {
   font-size: 50px;
 }
 
+
+#todo-form input{
+  width: 300px;
+  font-size: large;
+}
+
+#todo-list {
+  padding: 0;
+}
+
+#todo-form {
+  text-align: center;
+  line-height: 5;
+}
+
+ul {
+  list-style: none;
+}
+li button {
+  background:none;
+  border: none;
+  margin-left: 2px;
+}
+
+li {
+text-align: left;
+color: aqua;
+margin-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+/* -----------clock----------- */
+@media screen and (min-width: 1281px) {
+  #clock {
+    color: yellow;
+    font-size: 200px;
+    margin-bottom: auto;
+    background-color: rgba( 25, 0, 0, 0.5);
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 425px) and (orientation: portrait){
+  #clock {
+    color: gold;
+    background-color: rgba( 25, 0, 0, 0.5);
+    text-align: center;
+    font-size: 30px;
+  }
+  #clock-weather {
+    height: 1fr;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+/* -----------quote----------- */
+@media screen and (max-width: 425px) and (orientation: portrait){
+  #quote {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #quote {
+    display: none;
+  }
+}
 #quote {
   background-color: rgba( 25, 0, 0, 0.5 );
   padding-top: 20px;
@@ -80,59 +263,6 @@ body::-webkit-scrollbar {
   font-size: 60px;
   margin-top: 0;
   border-bottom: 2px solid crimson;
-}
-
-#todo-form input, #login-form input {
-  border: none;
-  border-bottom: 2px solid yellowgreen;
-  background: none;
-  color: yellowgreen;
-  font-family: 'Kid A', 'Lab';
-}
-
-#login-form {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  text-align: right;
-}
-
-#weather {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  color: white;
-  text-align: center;
-  display: inline-block;
-}
-
-#login-form button{
-  background:none;
-  border: none;
-  font-family: "Kid A", "Lab";
-  color: wheat;
-}
-
-#todo-form input{
-  width: 300px;
-  font-size: large;
-}
-
-#todo-list {
-  padding: 0;
-}
-
-.loginclock {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  text-align: center;
-}
-
-.logingreeting {
-  grid-column-start: 1;
-  grid-column-end: 4;
-}
-
-h1, #clock{
-  text-align: center;
 }
 
 #quote #tdf{
@@ -154,32 +284,37 @@ h1, #clock{
   padding-left: 20px;
   padding-right: 20px;
 }
+/* ----------Weather---------- */
+@media screen and (min-width: 1024px) {
+  #weather button {
+    background: none;
+    font-family: "Kid A", "Lab";
+    border: 2px solid crimson;
+    color: chartreuse;
+  }
 
-ul {
-  list-style: none;
-}
-li button {
-  background:none;
-  border: none;
-  margin-left: 2px;
-}
-
-li {
-text-align: left;
-color: aqua;
-margin-bottom: 10px;
-padding-left: 20px;
-padding-right: 20px;
-}
-
-#todo-form {
-  text-align: center;
-  line-height: 5;
+  #weather {
+    color: white;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: inline-block;
+  }
 }
 
-#weather button {
-  background: none;
-  font-family: "Kid A", "Lab";
-  border: 2px solid crimson;
-  color: chartreuse;
+@media screen and (max-width: 1024px) and (orientation: portrait){
+  #weather {
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  #weather button {
+    background: none;
+    font-family: "Kid A", "Lab";
+    border: 2px solid crimson;
+    color: chartreuse;
+  }
 }

@@ -1,5 +1,5 @@
 const API_key = "098f99aaf7a5d89e623f3961fa80786c";
-
+//API키 사용 이상시 교체 및 숨김 예정
 function onGeoOk(position) {
   const lat = position.coords.latitude;
   const lng = position.coords.longitude;
@@ -9,7 +9,6 @@ function onGeoOk(position) {
     .then((data) => {
       const weather = document.querySelector("#weather #w");
       const city = document.querySelector("#weather #c");
-      console.log(city);
       city.innerText = data.name;
       weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
     });

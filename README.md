@@ -1,4 +1,4 @@
-# Cyberandum Custom Homepage (Mac)
+# Cyberandum Custom Homepage (Mac and Mobile, Not for Pad)
 
 ### use it for your Homepage 💻  
   
